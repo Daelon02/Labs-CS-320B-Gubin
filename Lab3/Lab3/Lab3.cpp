@@ -15,7 +15,7 @@ int main(void) {
 	double t1, t2;
 	c = 1;
 	d = 2;
-	b = 0;
+	b = 6;
 	printf("Enter x, y >");
 	scanf("%lf %lf", &x, &y);
 	t1 = b/(a - b) * (b = x) - a/(a - b) * result * log10( a + x/b + x);
