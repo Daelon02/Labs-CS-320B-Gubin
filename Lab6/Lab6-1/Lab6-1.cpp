@@ -2,8 +2,10 @@
 #include <time.h>
 #include <locale.h>
 #include<cmath>
+#include<windows.h>
 int main(void) {
-    setlocale(LC_ALL, "Ru");
+    system("chcp 1251");
+    system("cls");
     srand(time(NULL));
     int min, max, n, a, i = 0;
     printf("Введите нижнюю границу числа: ");
