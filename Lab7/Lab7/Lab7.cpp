@@ -1,6 +1,9 @@
 ﻿#include <stdio.h>
 #include <math.h>
+#include<windows.h>
 int main(void) {
+    system("chcp 1251");
+    system("cls");
     short n;        /* параметр внешнего цикла */
     double x, y;    /* абсцисса и ордината графика */
     short h;        /* позиция точки на экране */
@@ -12,11 +15,11 @@ int main(void) {
         /* внутренний цикл для одного периода */
         for (x = 0; x < 4; x += 0.25) {
             /* 1-й отрезок */
-            if (x < 1) y = 2 * x - 1;
+            if (x < 1) y = x;
             /* 2-й отрезок */
-            else if (x < 3) y = 1 - sqrt(1 - (x - 2) * (x - 2));
+            else if (x < 3) y = x - 2;
             /* 3-й отрезок */
-            else y = 7 - 2 * x;
+            else y = x - 5;
             /* вывод строки таблицы */
             printf("| %5.2lf | %10.7lf |", x + n * 4, y);
             /* определение позиции точки */
