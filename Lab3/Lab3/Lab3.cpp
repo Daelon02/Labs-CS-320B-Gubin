@@ -12,10 +12,11 @@ int main(void) {
 	double a = 12.5, b = 1.3;
 	double c = 1, d = 2;
 	printf("Enter x, y > \n");
-	//scanf("%lf %lf", &x, &y);
-	t1 = b/(a - b) * (b + x) - a/((a - b) * (a - b)) * log10( a + x/b + x);
-	ax = (a * x);
-	t2 = 1 / a * (log10((tan(ax / 2) * PI / 180) - 1 / (sin(ax) * PI / 180)));
+	scanf("%lf %lf", &x, &y);
+	t1 = b/((a - b) * (b + x)) - a/((a - b) * (a - b)) * log10( a + x/b + x);
+	/*Перевод радианов в градусы*/
+	ax = (a * x) * PI / 180;
+	t2 = 1 / a * (log10(tan(ax / 2) - 1 / sin(ax)));
 	printf("t1 = %lg\n", t1);
 	printf("t2 = %lg\n", t2);
 	return 0;
