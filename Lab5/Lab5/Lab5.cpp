@@ -16,4 +16,5 @@ int main(void) {
     else
         printf("Точка попадает в область\n");
     return 0;
+
 }

@@ -5,15 +5,13 @@ int main(void) {
     system("chcp 1251");
     system("cls");
     long n;
-    double dbln;
     double sum = 0;
     double term;
     const double eps = 0.000001;
     long k2 = 1;
     short k1 = 1;
     for (n = 0; ; n++, k2 *= 2, k1 = -k1) {
-        dbln = n;
-        term = k1 * (dbln * dbln + 1) / (dbln * dbln * dbln + 3);
+        term = pow(k1, n) * (n * n + 1) / (n * n * n + 3);
         if (fabs(term) >= eps)
             sum += term;
         else break;
