@@ -13,7 +13,7 @@ int main(void) {
         for (x = 0; x < 4; x += 0.25) {
             if (x < 1) y = x;
             else if (x < 3) y = 2 - x;
-            else y = x - 5;
+            else y = x - 4;
             if (x <= 2)printf("| %.2lf | %.2lf  |", x + n * 4, y);
             else printf("| %.2lf | %.2lf |", x + n * 4, y);
             h = (y + 1) * 10;
