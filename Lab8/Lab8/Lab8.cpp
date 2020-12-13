@@ -9,15 +9,15 @@ int main(void)
     int par = 0;
     srand(time(NULL));
     printf(":\n");
-    for (i = 0; i < N - 1; i++)
+    for (i = 0; i < N; i++)
     {
-        mass[i] = rand() % 200 - 50;
+        mass[i] = rand() % 100 - 50;
         printf("%3d ", mass[i]);
     }
-    {
-        for (i = 0; i < N - 2; i++)
-            if ((mass[i] < 0 && mass[i + 1] >= 0) || (mass[i] >= 0 && mass[i + 1] < 0))
-                par++;
+
+    for (i = 0; i < N - 2; i++) {
+        if ((mass[i] < 0 && mass[i + 1] >= 0) || (mass[i] >= 0 && mass[i + 1] < 0))
+            par++;
     }
     printf("\n\n:\n");
     printf("%3d ", par);
