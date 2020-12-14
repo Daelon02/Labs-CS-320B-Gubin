@@ -1,7 +1,6 @@
-﻿#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
-#include<conio.h>
+﻿#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 #define N 200
 int main(void)
 {
@@ -15,8 +14,8 @@ int main(void)
         printf("%3d ", mass[i]);
     }
 
-    for (i = 0; i < N - 2; i++) {
-        if ((mass[i] < 0 && mass[i + 1] >= 0) || (mass[i] >= 0 && mass[i + 1] < 0))
+    for (i = 0; i < N; i++) {
+        if ((mass[i] < 0 && mass[i] >= 0) || (mass[i] >= 0 && mass[i + 1] < 0))
             par++;
     }
     printf("\n\n:\n");

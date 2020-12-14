@@ -18,7 +18,7 @@ int main() {
 	system("cls");
 
 
-	// Getting random number
+	// Получение рандомного номера
 	srand(time(0));
 	n = rand() % 1000 + 1;
 	scanf("%d", &n);
@@ -27,21 +27,21 @@ int main() {
 
 	printf("n = %d\n", n);
 
-	// Counting sum
+	// Суммирование чисел
 	while (n > 0) {
 		sum += n % 10;
 		n /= 10;
 		num++;
 	}
 	n = n1, num1 = num;
-	// Reverse number
+	// Обратное число
 	while (n > 0) {
 		answer += (n % 10) * difers(num1);
 		n /= 10;
 		num1--;
 	}
-	// data outputting
+	// Вывод данных
 	printf("Обратное число = %d\n", answer);
-	printf("Номер точки = %d\n", num);
+	printf("Сумма всех цифр числа = %d\n", sum);
 
 }
