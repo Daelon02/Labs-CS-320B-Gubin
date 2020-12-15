@@ -1,116 +1,122 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<ctime>
-#include<iostream>
-#include<Windows.h>
-#include<utility>
+﻿#include <stdio.h>
+#include <stdlib.h>
+#include <ctime>
+#include <conio.h>
 
-using namespace std;
-int n, k, B[100], pos, t, C[200];
-pair <int, bool>A[100];
-char action;
-int main() {
-	SetConsoleOutputCP(1251);
-	SetConsoleCP(1251);
-	srand(time(0));
+int main(void) {
 
-	printf("Введите количество элементов в массиве: ");
-	scanf("%d", &n);
-	while (n == 0) {
-		printf("Введены некорректные данные. Попробуйте ещё раз: ");
-		scanf("%d", &n);
+	system("chcp 1251");
+	system("cls");
+	srand(time(NULL));
+
+	const int N = 15;
+	int mas[N], mas2[N];//massive
+	int mas3[100];
+
+	int max, min; max = 0; //rand 
+	int q, w;
+	int x, y, z; z = 0;
+	int x1, x2, x3;
+	int q1, q2; q1 = 1; q2 = 0;
+	int n, N1;
+	int k; k = 0;
+
+	printf("Что вы хотите сделать с массивом?");
+	printf("\n1-добавить елементы\n2-удалить елементы\n");
+	printf("==>");
+	scanf_s("%d", &w);
+
+	for (n = 0; n < N; n++) { z = rand() % 10; mas[n] = z; mas2[n] = z; mas3[n] = z; }
+
+	switch (w) {
+
+	case 1: { for (n = 0; ;) {
+		printf("\nМассив:");
+		for (n = 0; n < N; n++) { printf("%3d", mas[n]); }
+
+		printf("\nС какого елемента:");
+		scanf_s("%d", &x);
+		printf("Сколько елементов добавить:");
+		scanf_s("%d", &x1);
+		x3 = x + x1;
+		N1 = N + x1;
+		if (x1 < 0 || x < 0) { printf("Вы ввели отрицательное число\n"); system("pause"); system("cls"); continue; }
+		if (x == N) {
+			k = x;
+		}
+		else if (x > N) {
+			printf("\nДействие невозможно");
+			printf("\nВ массиве максимум %d елементов, вы запрашиваете добавление елементов с %d по %d\n", N, x, x3);
+			system("pause"); system("cls");
+			continue;
+		}
+		else { k = x + 1; }
+		for (n = x; n < N; n++) { mas3[n + x] = mas[n]; }
+
+		printf("\nВыберите вариант заполнения елементов\n");
+		printf("1-рандомайзером\n2-в ручную\n");
+		printf("==>"); scanf_s("%d", &q);
+
+		switch (q)
+		{
+
+		case 1: { printf("\nВыберите min и max рандомайзера\n");
+
+			printf("min=>");
+			scanf_s("%d", &min);
+			printf("max=>");
+			scanf_s("%d", &max);
+
+			for (n = k; n < x3 + 1; n++) { z = rand() % (max - min + 1) + min; mas3[n] = z; }break; }
+		case 2: {for (n = k; n < x3 + 1; n++, q1++) { printf("%d)", q1); scanf_s("%d", &z); mas3[n] = z; }break; }
+		}
+
+		break;
 	}
 
-	// Adding elements in array
-	printf("Введите элементы массива: ");
-	for (int i = 0; i < n; ++i)
-		scanf("%d", &A[i].first);
 
-	// Checking action
-	printf("Введите действие (+ если хотите добавить элементы, - если удалить) ");
-	scanf("%s", &action);
-	if (action == '+') {
+		  printf("\nМассив до:");
+		  for (n = 0; n < N; n++) { printf("%3d", mas[n]); }
 
-		// Quantity elements to add action
-		printf("Сколько элементов хотите добавить? ");
-		scanf("%d", &k);
+		  printf("\nМассив после:");
+		  for (n = 0; n < N1; n++) { printf("%3d", mas3[n]); }
 
-		// Filling in array for adding elements
-		printf("Какие элементы хотите добавить? ");
-		for (int i = 0; i < k; ++i)
-			scanf("%d", &B[i]);
-
-		// Place for elements
-		printf("В какое место хотите вставить элементы? ");
-		scanf("%d", &pos);
-		while (pos > n) {
-			printf("Введены некорректные данные. Попробуйте ещё раз: ");
-			scanf("%d", &pos);
-		}
-
-		// Division part with adding to three parts
-		// Creating new array is:
-		// 1. Adding part original array to variable pos
-		// 2. Adding array B to new array
-		// 3. Adding residue of elements to new array
-		pos--;
-		int temp = 0, temp1 = 0;
-
-		// 1.
-		for (int i = 0; i < pos; ++i) {
-			C[i] = A[temp1].first;
-			temp1++;
-		}
-
-		// 2.
-		for (int i = pos; i < pos + k; ++i) {
-			C[i] = B[temp];
-			temp++;
-		}
-
-		// 3.
-		for (int i = pos + k; i < k + n; ++i) {
-			C[i] = A[temp1].first;
-			temp1++;
-		}
-
-		// Outputting
-		for (int i = 0; i < n + k; ++i)
-			printf("%d ", C[i]);
+		  break;
 	}
 
-	// Checking action
-	else if (action == '-') {
 
-		// Quantity elements to remove
-		printf("Сколько элементов хотите удалить? ");
-		scanf("%d", &k);
 
-		// Place to begin removing
-		printf("С какого элемента хотите начать удаление? ");
-		scanf("%d", &pos);
-		while (k > n) {
-			printf("Введены некорректные данные. Попробуйте ещё раз: ");
-			scanf("%d", &k);
+
+	case 2: {for (n = 0; ;) {
+		printf("\nМассив:");
+		for (n = 0; n < N; n++) { printf("%3d", mas[n]); }
+
+		printf("\nC какого елемента:");
+		scanf_s("%d", &x2);//с какого елемента
+		printf("Сколько елементов удалить:");
+		scanf_s("%d", &x1);//сколько елементов
+		x3 = x2 + x1;
+		if (x2 < 0 || x1 < 0) { printf("Вы ввели отрицательное число\n"); system("pause"); system("cls"); continue; }
+		else if (x3 <= N) {
+			for (n = x2; n < N - x1; n++) { mas2[n] = mas2[n + x1]; }
+
+			printf("\nМассив до:");
+			for (n = 0; n < N; n++) { printf("%3d", mas[n]); }
+
+			printf("\nМассив после:");
+			for (n = 0; n < N - x1; n++) { printf("%3d", mas2[n]); }
+			break;
 		}
-
-		// Definition corners of removing
-		A[pos - 1].second = 1;
-		A[pos + k - 2].second = 1;
-		bool u1 = false, u2 = false;
-		for (int i = pos - 1; i < pos + k - 2; ++i)
-			A[i].second = 1;
-
-		// Recreating array
-		for (int i = 0; i < n; ++i) {
-			if (A[i].second == 0) {
-				B[t] = A[i].first;
-				t++;
-			}
+		else if (x3 > N) {
+			printf("\nДействие невозможно,потому что");
+			printf("\nВ массиве максимум %d елементов, вы запрашиваете удаление елементов с %d по %d\n", N, x2, x3);
+			system("pause"); system("cls");
+			continue;
 		}
-
-		//Outputting
-		for (int i = 0; i < t; ++i)
-			printf("%d ", B[i]);
 	}
+
+	}
+	}
+
+	return 0;
 }
