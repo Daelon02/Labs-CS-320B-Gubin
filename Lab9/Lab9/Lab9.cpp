@@ -1,41 +1,27 @@
-﻿//#define  _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <windows.h>
-#define S 9
-
+﻿#include <stdio.h>
 int main()
 {
-    int const n = 4;
-    int i, j, border = 1, num = 1;
-    int A[S][S];
-
-    i = j = n;
-    A[j][i] = num;
-    while (border <= n)
+    int A[9][9], b = 2, s = 1, i = 4, j = 4, y = 0;
+    A[i][j] = 1;
+    while (true)
     {
-        while (i != n + border && ((i != n + border) || (j != n - border)))
-        {
-            i++; num++; A[j][i] = num;
-        }
-        while (j != n - border && ((i != n + border) || (j != n - border)))
-        {
-            j--; num++; A[j][i] = num;
-        }
-        while (i != n - border && ((i != n + border) || (j != n + border)))
-        {
-            i--; num++; A[j][i] = num;
-        }
-        while (j != n + border && ((i != n - border) || (j != n + border)))
-        {
-            j++; num++; A[j][i] = num;
-        }
-        if (j == n + border && i == n - border)
-            border++;
+        for (y = 0; y < s; y++)
+            A[i][--j] = b++;
+        if (j == -1)
+            break;
+        for (y = 0; y < s; y++)
+            A[++i][j] = b++;
+        s++;
+        for (y = 0; y < s; y++)
+            A[i][++j] = b++;
+        for (y = 0; y < s; y++)
+            A[--i][j] = b++;
+        s++;
     }
-    for (i = 0; i < 2 * n + 1; i++)
+    for (i = 0; i < 9; i++)
     {
-        for (j = 0; j < 2 * n + 1; j++)
-            printf("%3d", A[j][i]);
+        for (j = 0; j < 9; j++)
+            printf("%3d", A[i][j]);
         printf("\n");
     }
     return 0;

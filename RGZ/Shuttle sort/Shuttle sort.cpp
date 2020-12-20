@@ -71,11 +71,6 @@ int main()
         dur_arr[k] = duration.count();
 
         printf("\n Duration: %.7f\n", dur_arr[k]);
-
-        sort(dur_arr, dur_arr + N);
-        for (int i = 100; i < N - 100; ++i)
-            aver_dur += dur_arr[i];
-        cout << "Average duration = " << aver_dur / (N - 201) << "s";
     }
 }
 

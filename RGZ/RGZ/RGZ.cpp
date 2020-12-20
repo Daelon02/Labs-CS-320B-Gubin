@@ -5,7 +5,7 @@
 #define K 10
 #define N 1
 using namespace std;
-double aver_dur, dur_arr[N + 10];
+double aver_dur = 0, dur_arr[N + 10];
 void shell_sort(int* a, int n) {
     int h, i, j, t;
     for (h = n; h /= 2;) {
@@ -61,9 +61,5 @@ int main() {
             A[i] = A_copy[i];
 
         printf("\n Duration: %.7f\n", dur_arr[k]);
-        sort(dur_arr, dur_arr + N);
-        for (int i = 100; i < N - 100; ++i)
-            aver_dur += dur_arr[i];
-        cout << "Average duration = " << aver_dur / (N - 201) << "s";
     }
 }
