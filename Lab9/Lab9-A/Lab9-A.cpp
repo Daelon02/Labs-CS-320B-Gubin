@@ -35,8 +35,8 @@ int main() {
 	}
 	else {
 		srand(time(0));
-		n = rand() % 5 + 1;
-		m = rand() % 5 + 1;
+		n = 5;
+		m = 5;
 		for (int i = 0; i < n; ++i)
 			for (int j = 0; j < m; ++j)
 				A[i][j] = rand() % 50 + 1;
