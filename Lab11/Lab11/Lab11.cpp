@@ -22,7 +22,7 @@ int main()
     std::cout << "Введите b: ";
     std::cin >> b;
 
-    std::cout << "sum = " << sum(a, b) << "\n";
+    std::cout << "Сумма = " << sum(a, b) << "\n";
 
     return 0;
 }
