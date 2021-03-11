@@ -1,0 +1,22 @@
+﻿  lab2.cpp
+  outputting.cpp
+  sorting.cpp
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\sorting.cpp(53,18): error C2001: newline в константе
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\sorting.cpp(59,1): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"
+  struct_filling.cpp
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(30,6): error C2018: неизвестный знак "0x5b"
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(30,6): error C2018: неизвестный знак "0x73"
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(30,6): error C2018: неизвестный знак "0x74"
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(30,16): error C2143: синтаксическая ошибка: отсутствие ";" перед "]"
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(30,20): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(30,20): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(31,79): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(32,81): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(63,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(64,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(84,35): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(90,18): error C2018: неизвестный знак "0x5b"
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(90,18): error C2018: неизвестный знак "0x72"
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(90,18): error C2018: неизвестный знак "0x5d"
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course2Lab\struct_filling.cpp(90,18): error C2065: sc[r]:
+  Создание кода...

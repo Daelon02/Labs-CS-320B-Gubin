@@ -1,0 +1,4 @@
+﻿lab2.obj : error LNK2019: ссылка на неразрешенный внешний символ "void __cdecl struct_filling(struct Space *)" (?struct_filling@@YAXPAUSpace@@@Z) в функции _main.
+lab2.obj : error LNK2019: ссылка на неразрешенный внешний символ "void __cdecl outputting(struct Space *,int)" (?outputting@@YAXPAUSpace@@H@Z) в функции _main.
+lab2.obj : error LNK2019: ссылка на неразрешенный внешний символ "void __cdecl sorting(struct Space *,int)" (?sorting@@YAXPAUSpace@@H@Z) в функции _main.
+D:\OP-20-21\OP2021_v2.0\lab2\Debug\lab2.exe : fatal error LNK1120: неразрешенных внешних элементов: 3
