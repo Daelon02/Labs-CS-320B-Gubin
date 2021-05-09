@@ -1,0 +1,9 @@
+﻿  2course4Lab.cpp
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course4Lab\2course4Lab.cpp(17,15): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course4Lab\2course4Lab.cpp(18,15): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  funcs.cpp
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course4Lab\funcs.cpp(4,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course4Lab\funcs.cpp(14,25): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course4Lab\funcs.cpp(16,25): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  Создание кода...
+  2course4Lab.vcxproj -> C:\Users\substrate\source\repos\Labs-CS-320B-Gubin\2course4Lab\Debug\2course4Lab.exe

@@ -1,37 +1,21 @@
-﻿#include <iostream> 
-#include <cstdlib>
-#include <ctime>
-using namespace std;
+#include "funcs.h"
 
 int* Input(int& n, int* mass) {
     srand(time(NULL));
     for (int i = 0; i < n; ++i) {
         mass[i] = rand() % 100;
     }
-    cout << "Созданный массив: " << endl;
-    for (int i = 0; i < n; ++i) {
-        cout << "[" << i << "]=" <<
-            mass[i] << endl;
-    }
     return mass;
 }
-
-int main() {
-    srand(time(NULL));
-    int n;
-    cout << "Введите количество элементов массива: ";
-    cin >> n;
-    int* mass = new int[n];
-    mass = Input(n, mass);
-    float min = mass[0];
-    float max = mass[0];
-    for (int i = 0; i < n; i++) {   //находим минималтный и максимальный элемент в массиве
+void Exercise(int& n, int* mass, float& min, float& max) {
+    float rat = 0;
+    for (int i = 0; i < n; i++) {
         if (mass[i] < min)
             min = mass[i];
         if (mass[i] > max)
             max = mass[i];
     };
-    float rat = max / min;
+    rat = max / min;
     if (min == 0)
         cout << "Ошибка: деление на ноль!" << endl;
     else
@@ -48,6 +32,5 @@ int main() {
         }
 
     }
-    system("PAUSE");
-    return 0;
+
 }
